@@ -1,0 +1,8 @@
+#!/bin/bash
+
+git checkout main
+for i in "$@"
+do
+    git branch -D $i
+done
+git reset --hard initial
